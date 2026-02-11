@@ -10,7 +10,7 @@ export function Hero() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
             {/* Background Effects */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-white/40 dark:bg-transparent dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-slate-900 dark:via-[#0f172a] dark:to-black dark:opacity-90" />
+                <div className="absolute inset-0 bg-white/40 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-slate-900 dark:via-[#0f172a] dark:to-black dark:opacity-90" />
                 <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,black,rgba(0,0,0,0))]" />
 
                 {/* Animated Particles/Glow */}
@@ -48,8 +48,8 @@ export function Hero() {
                     transition={{ duration: 0.5 }}
                     className="flex items-center space-x-2 bg-slate-100/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm shadow-sm"
                 >
-                    <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
-                    <span className="text-sm font-medium text-primary dark:text-primary-foreground/80">
+                    <Shield className="h-4 w-4 text-primary animate-pulse" />
+                    <span className="text-sm font-medium text-primary dark:text-white">
                         Enterprise-grade Security Solutions
                     </span>
                 </motion.div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ShieldCheck, Linkedin, Twitter, Github, Mail } from 'lucide-react';
+import { ShieldCheck, Linkedin, Twitter, Github, Mail, MapPin } from 'lucide-react';
 
 export function Footer() {
     return (
@@ -67,11 +67,14 @@ export function Footer() {
                         <ul className="space-y-3 text-sm text-muted-foreground">
                             <li className="flex items-start">
                                 <Mail className="h-5 w-5 mr-2 text-primary shrink-0" />
-                                <span>contact@atlashive.com</span>
+                                <span>info@atlashive.com</span>
                             </li>
-                            <li>
-                                <p>123 Cyber Park, Tech District</p>
-                                <p>San Francisco, CA 94105</p>
+                            <li className="flex items-start">
+                                <MapPin className="h-5 w-5 mr-2 text-primary shrink-0" />
+                                <div>
+                                    <p>OO 11,12 - Shantinath Apartment,</p>
+                                    <p>Vejalpur, Ahmedabad - 380 015</p>
+                                </div>
                             </li>
                         </ul>
                     </div>

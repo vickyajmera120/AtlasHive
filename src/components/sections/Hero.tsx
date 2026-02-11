@@ -10,8 +10,8 @@ export function Hero() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
             {/* Background Effects */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 via-[#0f172a] to-black opacity-90" />
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+                <div className="absolute inset-0 bg-white/40 dark:bg-transparent dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-slate-900 dark:via-[#0f172a] dark:to-black dark:opacity-90" />
+                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,black,rgba(0,0,0,0))]" />
 
                 {/* Animated Particles/Glow */}
                 <motion.div
@@ -46,10 +46,10 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm"
+                    className="flex items-center space-x-2 bg-slate-100/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm shadow-sm"
                 >
                     <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
-                    <span className="text-sm font-medium text-primary-foreground/80">
+                    <span className="text-sm font-medium text-primary dark:text-primary-foreground/80">
                         Enterprise-grade Security Solutions
                     </span>
                 </motion.div>
@@ -58,7 +58,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60"
+                    className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-foreground dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-b dark:from-white dark:to-white/60"
                 >
                     Beyond Checklists.<br />
                     <span className="text-primary">Proactive Protection.</span>
@@ -86,7 +86,7 @@ export function Hero() {
                         </Button>
                     </Link>
                     <Link href="/contact">
-                        <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10 min-w-[200px] text-lg h-12">
+                        <Button size="lg" variant="outline" className="border-slate-300 dark:border-white/20 hover:bg-slate-100 dark:hover:bg-white/10 min-w-[200px] text-lg h-12">
                             Book a Consultation
                             <Shield className="ml-2 h-5 w-5" />
                         </Button>

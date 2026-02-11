@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export function AboutSection() {
@@ -61,11 +62,31 @@ export function AboutSection() {
                         viewport={{ once: true }}
                         className="relative"
                     >
-                        <div className="aspect-square bg-slate-900 rounded-2xl border border-white/10 p-2 relative overflow-hidden group">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-blue-500/20 opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-                            {/* Placeholder for Founder Image or Abstract Graphic */}
-                            <div className="h-full w-full bg-slate-950 rounded-xl flex items-center justify-center border border-white/5">
-                                <span className="text-muted-foreground/50 font-mono text-sm">[Security Architecture Visualization]</span>
+                        <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl group">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-blue-500/10 dark:from-primary/20 dark:to-blue-500/20 opacity-50 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+
+                            {/* Light Mode Image */}
+                            <div className="relative h-full w-full dark:hidden bg-white">
+                                <Image
+                                    src="/security-architecture-light.png"
+                                    alt="Security Architecture Visualization"
+                                    fill
+                                    className="object-contain p-4"
+                                    priority
+                                    unoptimized
+                                />
+                            </div>
+
+                            {/* Dark Mode Image */}
+                            <div className="relative h-full w-full hidden dark:block bg-slate-950">
+                                <Image
+                                    src="/security-architecture-dark.png"
+                                    alt="Security Architecture Visualization"
+                                    fill
+                                    className="object-contain p-4"
+                                    priority
+                                    unoptimized
+                                />
                             </div>
                         </div>
                     </motion.div>

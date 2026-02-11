@@ -7,6 +7,7 @@ import { ShieldCheck, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ModeToggle } from "@/components/mode-toggle";
 
 const navLinks = [
     { name: 'Home', href: '/' },
@@ -23,13 +24,21 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
+                    {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <div className="relative h-12 w-40">
+                        <div className="relative h-20 w-64">
                             <Image
                                 src="/logo.png"
                                 alt="AtlasHive"
                                 fill
-                                className="object-contain object-left"
+                                className="object-contain object-left dark:hidden"
+                                priority
+                            />
+                            <Image
+                                src="/dark-theme-logo.png"
+                                alt="AtlasHive"
+                                fill
+                                className="object-contain object-left hidden dark:block"
                                 priority
                             />
                         </div>
@@ -51,6 +60,7 @@ export function Navbar() {
                                 Get a Quote
                             </Button>
                         </Link>
+                        <ModeToggle />
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -91,6 +101,10 @@ export function Navbar() {
                                         Get a Quote
                                     </Button>
                                 </Link>
+                            </div>
+                            <div className="pt-4 flex justify-between items-center text-muted-foreground">
+                                <span>Switch Theme</span>
+                                <ModeToggle />
                             </div>
                         </div>
                     </motion.div>

@@ -9,12 +9,18 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand Column */}
                     <div className="space-y-4">
-                        <Link href="/" className="block relative h-12 w-40">
+                        <Link href="/" className="block relative h-20 w-64">
                             <Image
                                 src="/logo.png"
                                 alt="AtlasHive"
                                 fill
-                                className="object-contain object-left"
+                                className="object-contain object-left dark:hidden"
+                            />
+                            <Image
+                                src="/dark-theme-logo.png"
+                                alt="AtlasHive"
+                                fill
+                                className="object-contain object-left hidden dark:block"
                             />
                         </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed">

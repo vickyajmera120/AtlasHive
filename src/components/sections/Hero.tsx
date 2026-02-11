@@ -10,7 +10,7 @@ export function Hero() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
             {/* Background Effects */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-white/40 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-slate-900 dark:via-[#0f172a] dark:to-black dark:opacity-90" />
+                <div className="absolute inset-0 bg-white/40 dark:bg-transparent dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-slate-900 dark:via-[#0f172a] dark:to-black dark:opacity-90" />
                 <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,black,rgba(0,0,0,0))]" />
 
                 {/* Animated Particles/Glow */}

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ShieldCheck, Menu, X } from 'lucide-react';
 import { useState } from 'react';
@@ -23,10 +24,15 @@ export function Navbar() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <ShieldCheck className="h-8 w-8 text-primary" />
-                        <span className="text-xl font-bold tracking-tight text-foreground">
-                            Atlas<span className="text-primary">Hive</span>
-                        </span>
+                        <div className="relative h-12 w-40">
+                            <Image
+                                src="/logo.png"
+                                alt="AtlasHive"
+                                fill
+                                className="object-contain object-left"
+                                priority
+                            />
+                        </div>
                     </Link>
 
                     {/* Desktop Nav */}

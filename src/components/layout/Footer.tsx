@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ShieldCheck, Linkedin, Twitter, Github, Mail } from 'lucide-react';
 
 export function Footer() {
@@ -8,11 +9,13 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand Column */}
                     <div className="space-y-4">
-                        <Link href="/" className="flex items-center space-x-2">
-                            <ShieldCheck className="h-8 w-8 text-primary" />
-                            <span className="text-xl font-bold tracking-tight text-foreground">
-                                Atlas<span className="text-primary">Hive</span>
-                            </span>
+                        <Link href="/" className="block relative h-12 w-40">
+                            <Image
+                                src="/logo.png"
+                                alt="AtlasHive"
+                                fill
+                                className="object-contain object-left"
+                            />
                         </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed">
                             Securing the digital future with enterprise-grade VAPT and compliance solutions. Beyond checklists, towards true resilience.
